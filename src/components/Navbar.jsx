@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 w-full bg-gray-500">
+      <div className="fixed top-0 left-0 w-full bg-gray-500 z-50">
         <div className="container mx-auto flex justify-between py-5">
           <Link to="/">
             <h1 className="text-white text-xl px-5">MovieDB</h1>

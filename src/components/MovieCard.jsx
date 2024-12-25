@@ -6,7 +6,7 @@ function MovieCard({ items }) {
   }
   return (
     <>
-      <div className="w-60  ">
+      <div className="w-60 transform transition duration-300 hover:scale-110 ">
         <div className="rounded-md">
           <div className="cursor-pointer">
             <figure className="">
