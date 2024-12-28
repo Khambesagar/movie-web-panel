@@ -56,13 +56,24 @@ function SearchMovie() {
   return (
     <>
       <div className="w-full h-full bg-gray-600 md:px-12 pt-32">
-        <div className=" grid place-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10  pb-10">
-          {searchMovie.slice(0, moviesPerPage).map((movie) => (
-            <NavLink key={movie.id} to={`/movie/${movie.id}`}>
-              <MovieCard key={movie.id} items={movie} />
-            </NavLink>
-          ))}
+        <div>
+          {searchMovie.length === 0 ? (
+            <div className="h-screen w-full ">
+              <p className=" flex text-2xl text-white   justify-center">
+                Result Not Found
+              </p>
+            </div>
+          ) : (
+            <div className=" grid place-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10  pb-10">
+              {searchMovie.slice(0, moviesPerPage).map((movie) => (
+                <NavLink key={movie.id} to={`/movie/${movie.id}`}>
+                  <MovieCard key={movie.id} items={movie} />
+                </NavLink>
+              ))}
+            </div>
+          )}
         </div>
+
         <div>
           {/* Pagination Component & pass props*/}
           <Pagination
