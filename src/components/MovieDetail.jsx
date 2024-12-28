@@ -96,7 +96,7 @@ function MovieDetail() {
             <img
               src={`https://image.tmdb.org/t/p/w500/${movieDetail.poster_path}`}
               alt={movieDetail.title}
-              className="h-auto w-full md:h-96 md:w-96 p-2 rounded-r-lg"
+              className=" md:h-96 md:w-96 p-2 rounded-r-lg"
             />
           </div>
         </div>
